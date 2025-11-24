@@ -1,0 +1,118 @@
+/* src/components/ChatRoom.css */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chat-header {
+  background: #075e54;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #e5ddd5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message {
+  max-width: 70%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.message.sent {
+  align-self: flex-end;
+}
+
+.message.received {
+  align-self: flex-start;
+}
+
+.bubble {
+  background: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.message.sent .bubble {
+  background: #d9fdd3;
+  border-bottom-right-radius: 4px;
+}
+
+.message.received .bubble {
+  background: white;
+  border-bottom-left-radius: 4px;
+}
+
+.text {
+  word-wrap: break-word;
+  margin-bottom: 0.2rem;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: #666;
+  text-align: right;
+}
+
+.message-info {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  animation: fadeIn 0.3s;
+}
+
+.selected {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.chat-input {
+  display: flex;
+  padding: 0.8rem;
+  background: #f0f2f5;
+  border-top: 1px solid #ddd;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background: #075e54;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,71 @@
+/* General page styling */
+.webinar-register {
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Yellow headings */
+h1, h2, h3, h4 {
+  color: #f9d342; /* bright yellow */
+  text-shadow: 0 0 8px rgba(249, 211, 66, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Container boxes */
+.section-box {
+  background-color: #111;
+  border: 1px solid #f9d342;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(249, 211, 66, 0.2);
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Text */
+p, span, li {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Buttons */
+button {
+  background-color: #f9d342;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #f9d342;
+}
+
+/* Cards / small boxes */
+.card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-left: 4px solid #f9d342;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
+}
+
+/* Links */
+a {
+  color: #f9d342;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

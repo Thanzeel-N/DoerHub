@@ -1,0 +1,127 @@
+/* WebinarSlider.css - FULLY RESPONSIVE & NO CROPPING */
+
+.webinar-slider {
+  width: 100%;
+  padding: 2rem 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background: linear-gradient(to bottom, #111827, #000000);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  align-items: center;
+  perspective: 1500px;
+}
+
+.webinar-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each slide - uses aspect ratio instead of fixed height */
+.webinar-slide {
+  flex-shrink: 0;
+  width: 90vw;                    
+  max-width: 1000px;               
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+/* Responsive aspect ratio container (Golden ratio 16:9) */
+.webinar-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;  
+  background: #111;
+  overflow: hidden;
+}
+
+/* The actual image - fits perfectly without cropping */
+.webinar-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  transition: transform 0.8s ease;
+}
+
+/* Optional: use cover + letterbox (Instagram style) */
+
+.webinar-img {
+  object-fit: cover;
+  background: #000;
+}
+
+
+/* Hover Effects */
+.webinar-slide:hover {
+  transform: translateY(-20px) scale(1.02);
+  z-index: 10;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+.webinar-slide:hover .webinar-img {
+  transform: scale(1.05);
+}
+
+/* Overlay with title */
+.webinar-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 2rem 1.5rem 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.webinar-slide:hover .webinar-overlay {
+  opacity: 1;
+}
+
+.webinar-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  margin: 0;
+}
+
+/* Fallback when no image */
+.fallback-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .webinar-slide {
+    width: 70vw;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .webinar-slide {
+    width: 95vw;
+    max-width: 1300px;
+  }
+}

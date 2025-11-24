@@ -1,0 +1,118 @@
+.provider-profile-container {
+  background-color: #000;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-card {
+  background-color: #111;
+  border: 1px solid #ffcc00;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.text-warning {
+  color: #ffcc00 !important;
+}
+
+.btn-warning {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn-outline-warning {
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.form-control {
+  background-color: #222;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.alert {
+  background-color: #111;
+}
+/* Fix left-side width on larger screens */
+.profile-left {
+  max-width: 260px;
+}
+
+/* Prevent the image cell from stretching */
+.profile-left img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fix card width */
+.provider-profile-card {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* On desktops, 2-column layout behaves correctly */
+@media (min-width: 768px) {
+  .profile-left {
+    border-right: 1px solid #ffc107;
+    padding-right: 20px;
+  }
+}
+
+/* Make image look good on phone */
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 10%;
+  border: 3px solid #ffc107;
+  object-fit: cover;
+}
+
+/* Remove border on phone layout */
+@media (max-width: 768px) {
+  .profile-left {
+    border-right: none !important;
+    border-bottom: 1px solid #ffc107;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .provider-profile-card {
+    padding: 20px;
+  }
+}
+
+
+.provider-tab-buttons {
+  display: flex;
+  flex-direction: column;   /* stack on mobile */
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make buttons full width on mobile */
+.provider-tab-buttons .btn {
+  width: 100%;
+}
+
+/* On tablets & larger screens → row */
+@media (min-width: 768px) {
+  .provider-tab-buttons {
+    flex-direction: row;   
+  }
+  .provider-tab-buttons .btn {
+    width: auto;           
+  }
+}

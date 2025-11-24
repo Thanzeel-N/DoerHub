@@ -1,0 +1,55 @@
+/* Navbar colors */
+.navbar-dark.bg-black {
+  background-color: #000;
+}
+
+.text-yellow {
+  color: #ffc107 !important;
+}
+
+.btn-outline-yellow {
+  color: #ffc107;
+  border-color: #ffc107;
+  transition: 0.3s;
+}
+
+.btn-outline-yellow:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Active link highlighting */
+.nav-link {
+  color: #fff !important;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.active-link {
+  color: #ffc107 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #ffc107;
+}
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  transition: transform 0.3s ease;
+}
+
+/* Show */
+.nav-show {
+  transform: translateY(0);
+}
+
+/* Hide when scrolling down */
+.nav-hide {
+  transform: translateY(-100%);
+}

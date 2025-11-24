@@ -1,0 +1,168 @@
+/* Background gradient
+body {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Profile container 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Glass-style card 
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  color: #fff;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Profile heading 
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Profile picture 
+img {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.08);
+  border-color: #00d4ff;
+}
+
+/* Labels 
+label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.3rem;
+  display: block;
+  text-align: left;
+}
+
+/* Inputs 
+.form-control {
+  border-radius: 10px;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons 
+button {
+  border-radius: 30px !important;
+  font-weight: 500;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00d4ff, #007bff);
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #6c63ff, #3f37c9);
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+/* Message text 
+.text-success {
+  color: #c0ffb3 !important;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* Responsive design 
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+} */
+
+
+.user-tab-buttons {
+  display: flex;
+  flex-direction: column;   /* stack on mobile */
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make buttons full width on mobile */
+.user-tab-buttons .btn {
+  width: 100%;
+}
+
+/* On tablets & larger screens → row */
+@media (min-width: 768px) {
+  .user-tab-buttons {
+    flex-direction: row;   /* horizontal on large screens */
+  }
+  .user-tab-buttons .btn {
+    width: auto;           /* normal size */
+  }
+}

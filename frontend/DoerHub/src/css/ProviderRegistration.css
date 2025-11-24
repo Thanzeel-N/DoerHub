@@ -1,0 +1,191 @@
+/* Define theme variables */
+:root {
+  --background: #1a1a1a; /* Dark theme: dark gray */
+  --card-background: #242424; /* Dark theme: card background */
+  --text: #ffffff; /* Dark theme: white text */
+  --accent: #ffd700; /* Dark theme: bright yellow */
+  --input-bg: #090808; /* Dark theme: input background */
+  --input-border: #444444; /* Dark theme: input border */
+  --label-color: #c0c0c0; /* Dark theme: label color */
+  --error-color: #ff4d4d; /* Error message */
+  --success-color: #4caf50; /* Success message */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* Dark theme: shadow */
+  --focus-shadow: rgba(255, 215, 0, 0.2); /* Yellow focus shadow */
+}
+
+[data-theme="light"] {
+  --background: #ffffff; /* Light theme: white */
+  --card-background: #f5f5f5; /* Light theme: light gray card */
+  --text: #1a1a1a; /* Light theme: dark gray text */
+  --accent: #ffc107; /* Light theme: amber yellow */
+  --input-bg: #e8e8e8; /* Light theme: input background */
+  --input-border: #cccccc; /* Light theme: input border */
+  --label-color: #333333; /* Light theme: darker label */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Light theme: lighter shadow */
+  --focus-shadow: rgba(255, 193, 7, 0.3); /* Light theme: amber focus shadow */
+}
+
+
+/* .provider-signup-card {
+  background-color: var(--card-background);
+  color: var(--text);
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  border-top: 4px solid var(--accent);
+} */
+
+.provider-signup-card h2 {
+  color: var(--accent);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.provider-signup-card .subtitle {
+  text-align: center;
+  color: var(--label-color);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--label-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.form-group input[type="file"] {
+  padding: 0.5rem;
+}
+
+.form-group input[type="file"]::file-selector-button {
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #e6b800; /* Slightly darker yellow for hover, same for both themes */
+}
+
+.submit-btn:disabled {
+  background-color: var(--input-bg);
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: var(--error-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.success-message {
+  color: var(--success-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.otp-section {
+  text-align: center;
+}
+
+.otp-section p {
+  color: var(--label-color);
+  margin-bottom: 1.5rem;
+}
+
+.otp-input {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.otp-btn {
+  width: 40%;
+  padding: 0.8rem;
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* 🔴 Error message styling under each field */
+.error-text {
+  color: #ff4d4f;          /* red tone */
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* 🟢 Success message box */
+.success-message {
+  color: #2ecc71;
+  background-color: #e9f9f1;
+  border-left: 4px solid #2ecc71;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ⚠️ Error message box at the top */
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecea;
+  border-left: 4px solid #e74c3c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}

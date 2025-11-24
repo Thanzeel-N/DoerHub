@@ -1,0 +1,247 @@
+.provider-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.provider-dashboard .container-fluid {
+  padding: 2rem 1.5rem;
+}
+
+/* ===== HEADER & TITLE ===== */
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== WEBINAR SLIDER SECTION ===== */
+.webinar-section {
+  margin-bottom: 3rem;
+}
+
+.webinar-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f3d067;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ===== LEAFLET MAP ===== */
+.map-container {
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 3px solid #feec2b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+  transform: translateY(-4px);
+}
+
+.leaflet-container {
+  height: 100%;
+  border-radius: 13px;
+}
+
+/* ===== SERVICE REQUESTS CARD ===== */
+.requests-card {
+  background: #111;
+  border: 2px solid #ffc107;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.requests-card .card-header {
+  background: #000;
+  color: #ffc107;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #333;
+  letter-spacing: 0.5px;
+}
+
+/* ===== REQUEST LIST ITEMS ===== */
+.request-item {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #222;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.request-item:hover {
+  background: #1a1a1a;
+  transform: translateX(4px);
+}
+
+.request-item:last-child {
+  border-bottom: none;
+}
+
+.request-details h6 {
+  color: #ffc107;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.request-details small {
+  display: block;
+  color: #aaa;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.request-details small strong {
+  color: #ddd;
+}
+
+/* ===== BADGES ===== */
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-transform: capitalize;
+}
+
+.badge.bg-success {
+  background: #28a745 !important;
+  color: white;
+}
+
+.badge.bg-warning {
+  background: #ffc107 !important;
+  color: #212529;
+}
+
+.badge.bg-danger {
+  background: #dc3545 !important;
+  color: white;
+}
+
+.badge.bg-secondary {
+  background: #6c757d !important;
+  color: white;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-buttons .btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.action-buttons .btn-success {
+  background: #28a745;
+  border: none;
+  box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+}
+
+.action-buttons .btn-success:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+.action-buttons .btn-danger {
+  background: #dc3545;
+  border: none;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+}
+
+.action-buttons .btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #777;
+  font-style: italic;
+}
+
+.empty-state::before {
+  content: "📭";
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .provider-dashboard .container-fluid {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .request-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ws-status-alert {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .requests-card .card-header {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .action-buttons .btn {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+/* ===== LEAFLET POPUP CUSTOM ===== */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #111 !important;
+  color: #ffc107 !important;
+  border: 2px solid #ffc107 !important;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3) !important;
+}
+
+.leaflet-popup-content {
+  font-weight: 600 !important;
+  margin: 8px 12px !important;
+}
+
